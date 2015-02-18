@@ -15,7 +15,12 @@ class wc{
 	    return lines;
 	}
 	public int wordCount(String content){
-		int word = content.split("\\s+").length;
-		return word;
+		int wordLength = content.split("\\s+").length;
+		String[] words = content.split("\\s+");
+		// int count =word;
+		// for(int i=0;i<wordLength;i++){
+		// 	if( count--;
+		// }
+		return wordLength;
 	}
 }
