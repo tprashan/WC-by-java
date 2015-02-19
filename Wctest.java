@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -62,5 +63,13 @@ public class Wctest{
 		wc word = new wc();
 		int words = word.wordCount(content);
 		assertEquals(9,words);
+	}
+	@Test
+	public void ArrayOfLineWordCharCount(){
+		String content = "hello 	how 	r u?\r\n i m fine and u?";
+		wc word = new wc();
+		int expected[] = {word.lineCount(content),word.wordCount(content),word.character(content)};
+		int result[] = word.lines_words_chars(content);
+		assertEquals(Arrays.equals(expected, result),true);
 	}
 }

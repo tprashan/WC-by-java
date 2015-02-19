@@ -24,7 +24,9 @@ class wc{
 		return count;
 	}
 
-	// public static int[] lines_words_chars(){
-		
-	// }
+	public static int[] lines_words_chars(String content){
+		wc wc = new wc();
+		int l_w_c[] = {wc.lineCount(content),wc.wordCount(content),wc.character(content)};
+		return l_w_c;
+	}
 }
