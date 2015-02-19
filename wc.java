@@ -21,7 +21,7 @@ class wc{
 		for(int i=0;i<wordLength;i++){
 			if(words[i].equals("")) count-- ;
 		}
-		return count;
+		return wordLength;
 	}
 
 	public static int[] lines_words_chars(String content){

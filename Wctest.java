@@ -5,53 +5,53 @@ import static org.junit.Assert.*;
 public class Wctest{
 	String str = "hello, this is a good day.\r\nWhat do you think?\r\n";
 	@Test
-	public void stringLength(){
+	public void FindStringLength(){
 		wc len = new wc();
 		int length = len.character(str);
 		assertEquals(48,length);
 	}
 	@Test
-	public void stringCharacter(){
+	public void stringShouldHave32Characters(){
 		String content = "hello how r u?\r\n i m fine and u?";
 		wc len = new wc();
 		int length = len.character(content);
 		assertEquals(32,length);
 	}
 	@Test
-	public void stringCharacterWhentabIsThere(){
+	public void stringShouldHave34CharacterWhentabIsPresentThere(){
 		String content = "hello 	how r u?\r\n i m fine 	and u?";
 		wc len = new wc();
 		int length = len.character(content);
 		assertEquals(34,length);
 	}
 	@Test
-	public void countLineIsOne(){
+	public void countLineShouldGiveOne(){
 		String content = "hello how r u?\r\n i m fine and u?";
 		wc line = new wc();
 		int lines = line.lineCount(content);
 		assertEquals(1,lines);
 	}
 	@Test
-	public void lineCount(){
+	public void countLineShouldGiveTwo(){
 		wc line = new wc();
 		int lines = line.lineCount(str);
 		assertEquals(2,lines);
 	}
 	@Test
-	public void lineCountForSpaceAfterSlashN(){
+	public void lineCountShouldGiveTwoWhenSpaceAfterSlashN(){
 		String content = "hello, this is a good day.\r\nWhat do you think?\r\n ";
 		wc line = new wc();
 		int lines = line.lineCount(content);
 		assertEquals(2,lines);
 	}
 	@Test
-	public void wordCount(){
+	public void wordCountShouldGiveTen(){
 		wc word = new wc();
 		int words = word.wordCount(str);
 		assertEquals(10,words);
 	}
 	@Test
-	public void wordCountIsNine(){
+	public void wordCountShouldGiveNine(){
 		String content = "hello how r u?\r\n i m fine and u?";
 		wc word = new wc();
 		int words = word.wordCount(content);
@@ -65,7 +65,7 @@ public class Wctest{
 		assertEquals(9,words);
 	}
 	@Test
-	public void ArrayOfLineWordCharCount(){
+	public void line_Word_Char_Should_Give_Array_Of_l_w_c_Count(){
 		String content = "hello 	how 	r u?\r\n i m fine and u?";
 		wc word = new wc();
 		int expected[] = {word.lineCount(content),word.wordCount(content),word.character(content)};

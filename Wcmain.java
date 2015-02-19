@@ -20,7 +20,6 @@ class Wcmain{
             wc wcObject = new wc();
 
             String file = MyFile.read(args[1]);
-            System.out.println(file);
             lines += wcObject.lineCount(file);
             words += wcObject.wordCount(file);
             characters += wcObject.character(file);
