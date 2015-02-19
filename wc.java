@@ -1,9 +1,8 @@
 class wc{
 
 	public int character(String content){
-		int count;
-		int character = content.length();
-		return character;
+		int characters = content.length();
+		return characters;
 	}
 	public int lineCount(String str){
 	    int lines = 0;
@@ -21,7 +20,7 @@ class wc{
 		for(int i=0;i<wordLength;i++){
 			if(words[i].equals("")) count-- ;
 		}
-		return wordLength;
+		return count;
 	}
 
 	public static int[] lines_words_chars(String content){

@@ -16,13 +16,12 @@ class Wcmain{
       public static void main(String[] args) {
             String option = args[0];
             File inFile = new File(args[1]);
-            int lines=0;int words=0;int characters=0;
             wc wcObject = new wc();
 
-            String file = MyFile.read(args[1]);
-            lines += wcObject.lineCount(file);
-            words += wcObject.wordCount(file);
-            characters += wcObject.character(file);
+            String fileContent = ReadFile.read(args[1]);
+            int lines = wcObject.lineCount(fileContent);
+            int words = wcObject.wordCount(fileContent);
+            int characters = wcObject.character(fileContent);
 
             if(option.equals("-l")) printCountOfLines(lines) ;
             if(option.equals("-w")) printCountOfWords(words) ;

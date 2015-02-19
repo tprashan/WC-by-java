@@ -72,4 +72,25 @@ public class Wctest{
 		int result[] = word.lines_words_chars(content);
 		assertEquals(Arrays.equals(expected, result),true);
 	}
+	@Test
+	public void minus_l_should_have_index_0(){
+		String flag = "-l";
+		PerformOption option = new PerformOption();
+		int index = option.findIndex(flag);
+		assertEquals(0,index);
+	}
+	@Test
+	public void minus_w_should_have_index_1(){
+		String flag = "-w";
+		PerformOption option = new PerformOption();
+		int index = option.findIndex(flag);
+		assertEquals(1,index);
+	}
+	@Test
+	public void minus_c_should_have_index_2(){
+		String flag = "-c";
+		PerformOption option = new PerformOption();
+		int index = option.findIndex(flag);
+		assertEquals(2,index);
+	}
 }
