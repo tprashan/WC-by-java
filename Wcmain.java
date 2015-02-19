@@ -21,10 +21,10 @@ class Wcmain{
             	strLine = br.readLine();
             }
 
-            }catch (Exception e){//Catch exception if any
+            }catch (Exception e){
               System.err.println("Error: " + e.getMessage());
             }
 
-            System.out.println("lines:"+lines+" words:"+words+" char:"+characters);
+            System.out.println("lines:"+lines+" words:"+words+" char:"+characters+"  "+args[0]);
 	}
 }

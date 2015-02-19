@@ -17,10 +17,14 @@ class wc{
 	public int wordCount(String content){
 		int wordLength = content.split("\\s+").length;
 		String[] words = content.split("\\s+");
-		// int count =word;
-		// for(int i=0;i<wordLength;i++){
-		// 	if( count--;
-		// }
-		return wordLength;
+		int count =wordLength;
+		for(int i=0;i<wordLength;i++){
+			if(words[i].equals("")) count-- ;
+		}
+		return count;
 	}
+
+	// public static int[] lines_words_chars(){
+		
+	// }
 }
