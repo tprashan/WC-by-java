@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class ArgumentSeperator{
 
 	String option[] = {"-l","-w","-c"};
@@ -23,19 +25,18 @@ public class ArgumentSeperator{
 				flags[j]=argumentes[i];j++;
 			}
 		}
-
-		return flags;
+		String[] unique = new HashSet<String>(Arrays.asList(flags)).toArray(new String[0]);
+		return unique;
 	}
 
 	public String[] collectionOfFiles(){
 		int i;int j=0;int length = argumentes.length;
 		String files[] = new String[length];
 		for(i=0;i<length;i++){
-			if(findOption(argumentes[i])==false){
+			if(!findOption(argumentes[i])){
 				files[j]=argumentes[i];j++;
 			}
 		}
-
 		return files;
 	} 
 }
