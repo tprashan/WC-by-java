@@ -1,4 +1,5 @@
 import java.io.*;
+
 public class ReadFile{
 	public static String read(String fileName){
 		File file = new File(fileName);
