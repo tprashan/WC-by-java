@@ -37,6 +37,7 @@ public class ArgumentSeperator{
 				files[j]=argumentes[i];j++;
 			}
 		}
-		return files;
+		String[] unique = new HashSet<String>(Arrays.asList(files)).toArray(new String[0]);
+		return unique;
 	} 
 }

@@ -8,7 +8,7 @@ class Wcmain{
             String file[] = seperator.collectionOfFiles();
             String flag[] = seperator.collectionOfFlags();
 
-            if(file[0]==null)
+            if(file.length==1 || (file[0]==null && file[1]==null))
                   System.out.println("Give a valid file name.");
             else{
                   HandleMultipleOptions handleMultiOption = new HandleMultipleOptions(file,flag);
